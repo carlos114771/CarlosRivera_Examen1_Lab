@@ -643,6 +643,11 @@ public class Principal extends javax.swing.JFrame {
         jButton9.setText("Modificar");
 
         jButton12.setText("Eliminar");
+        jButton12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton12ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -1460,12 +1465,12 @@ public class Principal extends javax.swing.JFrame {
 
     private void modificar_id_estudianteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_modificar_id_estudianteActionPerformed
         // TODO add your handling code here:
-        
+
     }//GEN-LAST:event_modificar_id_estudianteActionPerformed
 
     private void modificar_poliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_modificar_poliActionPerformed
         // TODO add your handling code here:
-         this.modificar_politicos.setModal(true);
+        this.modificar_politicos.setModal(true);
         this.modificar_politicos.pack();
         this.modificar_politicos.setLocationRelativeTo(this);
         this.modificar_politicos.setVisible(true);
@@ -1511,6 +1516,15 @@ public class Principal extends javax.swing.JFrame {
     private void modificar_id_politicoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_modificar_id_politicoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_modificar_id_politicoActionPerformed
+
+    private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
+        // TODO add your handling code here:
+//        if (tabla_estudiante.getSelectedRow() >= 0) {
+//            DefaultTableModel modelo = (DefaultTableModel) tabla_estudiante.getModel();
+//            modelo.removeRow(tabla_estudiante.getSelectedRow());
+//            tabla_estudiante.setModel(modelo);
+//        }
+    }//GEN-LAST:event_jButton12ActionPerformed
 
     /**
      * @param args the command line arguments
