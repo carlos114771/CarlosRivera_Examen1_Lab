@@ -7,6 +7,7 @@ package carlosrivera_examen1;
 
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -34,6 +35,8 @@ public class Principal extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
+        jButton15 = new javax.swing.JButton();
+        jButton16 = new javax.swing.JButton();
         agregar = new javax.swing.JDialog();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel1 = new javax.swing.JPanel();
@@ -84,6 +87,84 @@ public class Principal extends javax.swing.JFrame {
         dinero_politico = new javax.swing.JTextField();
         jLabel23 = new javax.swing.JLabel();
         partidos = new javax.swing.JComboBox<>();
+        modificar = new javax.swing.JDialog();
+        jTabbedPane2 = new javax.swing.JTabbedPane();
+        jPanel4 = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        tabla_empleado = new javax.swing.JTable();
+        jButton8 = new javax.swing.JButton();
+        jButton13 = new javax.swing.JButton();
+        jPanel5 = new javax.swing.JPanel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        tabla_estudiante = new javax.swing.JTable();
+        jButton9 = new javax.swing.JButton();
+        jButton12 = new javax.swing.JButton();
+        jPanel6 = new javax.swing.JPanel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        tabla_politico = new javax.swing.JTable();
+        jButton10 = new javax.swing.JButton();
+        jButton11 = new javax.swing.JButton();
+        modificar_empleado = new javax.swing.JDialog();
+        jLabel24 = new javax.swing.JLabel();
+        jLabel25 = new javax.swing.JLabel();
+        jLabel26 = new javax.swing.JLabel();
+        jLabel27 = new javax.swing.JLabel();
+        jLabel28 = new javax.swing.JLabel();
+        jLabel29 = new javax.swing.JLabel();
+        jButton14 = new javax.swing.JButton();
+        modificar_departamento_empleado = new javax.swing.JComboBox<>();
+        modificar_edad_empleado = new javax.swing.JTextField();
+        boleto_empleado1 = new javax.swing.JTextField();
+        modificar_id_empleado = new javax.swing.JTextField();
+        modificar_nombre_empleado = new javax.swing.JTextField();
+        modificar_dinero_empleado = new javax.swing.JTextField();
+        jLabel30 = new javax.swing.JLabel();
+        modificar_empleo = new javax.swing.JTextField();
+        menu_modificar_empleado = new javax.swing.JPopupMenu();
+        modifcar_e = new javax.swing.JMenuItem();
+        Compras = new javax.swing.JDialog();
+        jComboBox1 = new javax.swing.JComboBox<>();
+        jRadioButton1 = new javax.swing.JRadioButton();
+        jRadioButton2 = new javax.swing.JRadioButton();
+        jRadioButton3 = new javax.swing.JRadioButton();
+        jRadioButton4 = new javax.swing.JRadioButton();
+        costo = new javax.swing.ButtonGroup();
+        menu_modificar_estudiante = new javax.swing.JPopupMenu();
+        modificar_est = new javax.swing.JMenuItem();
+        modificar_estudiante = new javax.swing.JDialog();
+        jLabel31 = new javax.swing.JLabel();
+        jLabel32 = new javax.swing.JLabel();
+        jLabel33 = new javax.swing.JLabel();
+        jLabel34 = new javax.swing.JLabel();
+        jLabel35 = new javax.swing.JLabel();
+        jLabel36 = new javax.swing.JLabel();
+        jButton17 = new javax.swing.JButton();
+        modificar_departamento_estudiante = new javax.swing.JComboBox<>();
+        modificar_edad_estudiante = new javax.swing.JTextField();
+        boleto_estudiante1 = new javax.swing.JTextField();
+        modificar_id_estudiante = new javax.swing.JTextField();
+        modificar_nombre_estudiante = new javax.swing.JTextField();
+        modificar_dinero_estudiante = new javax.swing.JTextField();
+        jLabel37 = new javax.swing.JLabel();
+        modificar_carrera = new javax.swing.JTextField();
+        menu_modificar_politico = new javax.swing.JPopupMenu();
+        modificar_poli = new javax.swing.JMenuItem();
+        modificar_politicos = new javax.swing.JDialog();
+        jLabel38 = new javax.swing.JLabel();
+        jLabel39 = new javax.swing.JLabel();
+        jLabel40 = new javax.swing.JLabel();
+        jLabel41 = new javax.swing.JLabel();
+        jLabel42 = new javax.swing.JLabel();
+        jLabel43 = new javax.swing.JLabel();
+        jButton18 = new javax.swing.JButton();
+        modificar_departamento_politico = new javax.swing.JComboBox<>();
+        modificar_edad_politico = new javax.swing.JTextField();
+        boleto_politico1 = new javax.swing.JTextField();
+        modificar_id_politico = new javax.swing.JTextField();
+        modificar_nombre_politico = new javax.swing.JTextField();
+        modificar_dinero_politico = new javax.swing.JTextField();
+        jLabel44 = new javax.swing.JLabel();
+        modificar_partidos = new javax.swing.JComboBox<>();
         jLabel2 = new javax.swing.JLabel();
         contraseña = new javax.swing.JPasswordField();
         jButton1 = new javax.swing.JButton();
@@ -99,30 +180,57 @@ public class Principal extends javax.swing.JFrame {
         jButton3.setText("Listar");
 
         jButton4.setText("Modificar");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+
+        jButton15.setText("Comprar");
+        jButton15.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton15ActionPerformed(evt);
+            }
+        });
+
+        jButton16.setText("Simulacion");
 
         javax.swing.GroupLayout participanteLayout = new javax.swing.GroupLayout(participante.getContentPane());
         participante.getContentPane().setLayout(participanteLayout);
         participanteLayout.setHorizontalGroup(
             participanteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(participanteLayout.createSequentialGroup()
-                .addGap(92, 92, 92)
-                .addGroup(participanteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(43, 43, 43)
-                .addComponent(jButton4)
-                .addContainerGap(106, Short.MAX_VALUE))
+                .addGroup(participanteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(participanteLayout.createSequentialGroup()
+                        .addGap(150, 150, 150)
+                        .addComponent(jButton16))
+                    .addGroup(participanteLayout.createSequentialGroup()
+                        .addGap(55, 55, 55)
+                        .addGroup(participanteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(participanteLayout.createSequentialGroup()
+                                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jButton15))
+                            .addGroup(participanteLayout.createSequentialGroup()
+                                .addComponent(jButton2)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 126, Short.MAX_VALUE)
+                                .addComponent(jButton4)))))
+                .addGap(60, 60, 60))
         );
         participanteLayout.setVerticalGroup(
             participanteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(participanteLayout.createSequentialGroup()
-                .addGap(79, 79, 79)
+                .addGap(47, 47, 47)
                 .addGroup(participanteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton2)
                     .addComponent(jButton4))
                 .addGap(48, 48, 48)
-                .addComponent(jButton3)
-                .addContainerGap(109, Short.MAX_VALUE))
+                .addComponent(jButton16)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
+                .addGroup(participanteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton3)
+                    .addComponent(jButton15))
+                .addGap(61, 61, 61))
         );
 
         jLabel1.setText("Nombre Completo");
@@ -146,6 +254,8 @@ public class Principal extends javax.swing.JFrame {
 
         departamento_empleado.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Atlántida", "Choluteca", "Colón", "Comayagua", "Copán", "Cortes", "El Paraíso", "Francisco Morazán", "Gracias a Dios", "Intibucá", "Islas de la Bahía", "La Paz", "Lempira", "Ocotepeque", "Olancho", "Santa Bárbara", "Valle", "Yoro" }));
 
+        boleto_empleado.setEditable(false);
+        boleto_empleado.setText("0");
         boleto_empleado.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 boleto_empleadoActionPerformed(evt);
@@ -249,6 +359,8 @@ public class Principal extends javax.swing.JFrame {
 
         departamento_estudiante.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Atlántida", "Choluteca", "Colón", "Comayagua", "Copán", "Cortes", "El Paraíso", "Francisco Morazán", "Gracias a Dios", "Intibucá", "Islas de la Bahía", "La Paz", "Lempira", "Ocotepeque", "Olancho", "Santa Bárbara", "Valle", "Yoro" }));
 
+        boleto_estudiante.setEditable(false);
+        boleto_estudiante.setText("0");
         boleto_estudiante.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 boleto_estudianteActionPerformed(evt);
@@ -352,6 +464,8 @@ public class Principal extends javax.swing.JFrame {
 
         departamento_politico.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Atlántida", "Choluteca", "Colón", "Comayagua", "Copán", "Cortes", "El Paraíso", "Francisco Morazán", "Gracias a Dios", "Intibucá", "Islas de la Bahía", "La Paz", "Lempira", "Ocotepeque", "Olancho", "Santa Bárbara", "Valle", "Yoro" }));
 
+        boleto_politico.setEditable(false);
+        boleto_politico.setText("0");
         boleto_politico.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 boleto_politicoActionPerformed(evt);
@@ -453,6 +567,564 @@ public class Principal extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
+        tabla_empleado.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Nombre", "Edad", "ID"
+            }
+        ));
+        tabla_empleado.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tabla_empleadoMouseClicked(evt);
+            }
+        });
+        jScrollPane1.setViewportView(tabla_empleado);
+
+        jButton8.setText("Modificar");
+        jButton8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton8ActionPerformed(evt);
+            }
+        });
+
+        jButton13.setText("Eliminar");
+        jButton13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton13ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGap(187, 187, 187)
+                .addComponent(jButton8)
+                .addGap(46, 46, 46)
+                .addComponent(jButton13)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 645, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton8)
+                    .addComponent(jButton13))
+                .addContainerGap(52, Short.MAX_VALUE))
+        );
+
+        jTabbedPane2.addTab("Empleado", jPanel4);
+
+        tabla_estudiante.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Nombre", "Edad", "ID"
+            }
+        ));
+        tabla_estudiante.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tabla_estudianteMouseClicked(evt);
+            }
+        });
+        jScrollPane2.setViewportView(tabla_estudiante);
+
+        jButton9.setText("Modificar");
+
+        jButton12.setText("Eliminar");
+
+        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
+        jPanel5.setLayout(jPanel5Layout);
+        jPanel5Layout.setHorizontalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 645, Short.MAX_VALUE)
+                .addContainerGap())
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addGap(150, 150, 150)
+                .addComponent(jButton9)
+                .addGap(143, 143, 143)
+                .addComponent(jButton12)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel5Layout.setVerticalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton9)
+                    .addComponent(jButton12))
+                .addGap(28, 28, 28))
+        );
+
+        jTabbedPane2.addTab("Estudiante", jPanel5);
+
+        tabla_politico.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Nombre", "Edad", "ID"
+            }
+        ));
+        jScrollPane3.setViewportView(tabla_politico);
+
+        jButton10.setText("Modificar");
+
+        jButton11.setText("Eliminar");
+
+        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
+        jPanel6.setLayout(jPanel6Layout);
+        jPanel6Layout.setHorizontalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 645, Short.MAX_VALUE)
+                .addContainerGap())
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addGap(120, 120, 120)
+                .addComponent(jButton10)
+                .addGap(53, 53, 53)
+                .addComponent(jButton11)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel6Layout.setVerticalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton10)
+                    .addComponent(jButton11))
+                .addContainerGap(52, Short.MAX_VALUE))
+        );
+
+        jTabbedPane2.addTab("Politico", jPanel6);
+
+        javax.swing.GroupLayout modificarLayout = new javax.swing.GroupLayout(modificar.getContentPane());
+        modificar.getContentPane().setLayout(modificarLayout);
+        modificarLayout.setHorizontalGroup(
+            modificarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(modificarLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jTabbedPane2)
+                .addContainerGap())
+        );
+        modificarLayout.setVerticalGroup(
+            modificarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(modificarLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jTabbedPane2)
+                .addContainerGap())
+        );
+
+        jLabel24.setText("Nombre Completo");
+
+        jLabel25.setText("Edad");
+
+        jLabel26.setText("Id");
+
+        jLabel27.setText("Id de boleto");
+
+        jLabel28.setText("Departamento");
+
+        jLabel29.setText("Dinero disponible");
+
+        jButton14.setText("Modificar");
+        jButton14.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton14ActionPerformed(evt);
+            }
+        });
+
+        modificar_departamento_empleado.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Atlántida", "Choluteca", "Colón", "Comayagua", "Copán", "Cortes", "El Paraíso", "Francisco Morazán", "Gracias a Dios", "Intibucá", "Islas de la Bahía", "La Paz", "Lempira", "Ocotepeque", "Olancho", "Santa Bárbara", "Valle", "Yoro" }));
+
+        boleto_empleado1.setEditable(false);
+        boleto_empleado1.setText("0");
+        boleto_empleado1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                boleto_empleado1ActionPerformed(evt);
+            }
+        });
+
+        modificar_id_empleado.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                modificar_id_empleadoActionPerformed(evt);
+            }
+        });
+
+        jLabel30.setText("Empleo");
+
+        javax.swing.GroupLayout modificar_empleadoLayout = new javax.swing.GroupLayout(modificar_empleado.getContentPane());
+        modificar_empleado.getContentPane().setLayout(modificar_empleadoLayout);
+        modificar_empleadoLayout.setHorizontalGroup(
+            modificar_empleadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(modificar_empleadoLayout.createSequentialGroup()
+                .addGroup(modificar_empleadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(modificar_empleadoLayout.createSequentialGroup()
+                        .addGap(111, 111, 111)
+                        .addComponent(jButton14))
+                    .addGroup(modificar_empleadoLayout.createSequentialGroup()
+                        .addGap(25, 25, 25)
+                        .addGroup(modificar_empleadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jLabel30, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel29, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel28, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel27, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel26, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel25, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel24, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(37, 37, 37)
+                        .addGroup(modificar_empleadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(modificar_departamento_empleado, 0, 154, Short.MAX_VALUE)
+                            .addComponent(modificar_edad_empleado)
+                            .addComponent(boleto_empleado1)
+                            .addComponent(modificar_id_empleado)
+                            .addComponent(modificar_nombre_empleado)
+                            .addComponent(modificar_dinero_empleado)
+                            .addComponent(modificar_empleo))))
+                .addContainerGap(82, Short.MAX_VALUE))
+        );
+        modificar_empleadoLayout.setVerticalGroup(
+            modificar_empleadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(modificar_empleadoLayout.createSequentialGroup()
+                .addGap(27, 27, 27)
+                .addGroup(modificar_empleadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel24)
+                    .addComponent(modificar_nombre_empleado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(modificar_empleadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel25)
+                    .addComponent(modificar_edad_empleado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(modificar_empleadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel26)
+                    .addComponent(modificar_id_empleado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(modificar_empleadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel27)
+                    .addComponent(boleto_empleado1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(modificar_empleadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel28)
+                    .addComponent(modificar_departamento_empleado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(modificar_empleadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel29)
+                    .addComponent(modificar_dinero_empleado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(modificar_empleadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel30)
+                    .addComponent(modificar_empleo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton14)
+                .addContainerGap())
+        );
+
+        menu_modificar_empleado.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                menu_modificar_empleadoMouseClicked(evt);
+            }
+        });
+
+        modifcar_e.setText("Modificar Empleado");
+        modifcar_e.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                modifcar_eActionPerformed(evt);
+            }
+        });
+        menu_modificar_empleado.add(modifcar_e);
+
+        costo.add(jRadioButton1);
+        jRadioButton1.setSelected(true);
+        jRadioButton1.setText("350 lps");
+
+        costo.add(jRadioButton2);
+        jRadioButton2.setText("10,000 lps");
+
+        costo.add(jRadioButton3);
+        jRadioButton3.setText("100,000 lps");
+
+        costo.add(jRadioButton4);
+        jRadioButton4.setText("1,000,000 lps");
+
+        javax.swing.GroupLayout ComprasLayout = new javax.swing.GroupLayout(Compras.getContentPane());
+        Compras.getContentPane().setLayout(ComprasLayout);
+        ComprasLayout.setHorizontalGroup(
+            ComprasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ComprasLayout.createSequentialGroup()
+                .addGroup(ComprasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(ComprasLayout.createSequentialGroup()
+                        .addGap(73, 73, 73)
+                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(ComprasLayout.createSequentialGroup()
+                        .addGap(48, 48, 48)
+                        .addGroup(ComprasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(ComprasLayout.createSequentialGroup()
+                                .addComponent(jRadioButton3)
+                                .addGap(18, 18, 18)
+                                .addComponent(jRadioButton4))
+                            .addGroup(ComprasLayout.createSequentialGroup()
+                                .addComponent(jRadioButton1)
+                                .addGap(18, 18, 18)
+                                .addComponent(jRadioButton2)))))
+                .addContainerGap(130, Short.MAX_VALUE))
+        );
+        ComprasLayout.setVerticalGroup(
+            ComprasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ComprasLayout.createSequentialGroup()
+                .addGap(26, 26, 26)
+                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(75, 75, 75)
+                .addGroup(ComprasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jRadioButton1)
+                    .addComponent(jRadioButton2))
+                .addGap(39, 39, 39)
+                .addGroup(ComprasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jRadioButton3)
+                    .addComponent(jRadioButton4))
+                .addContainerGap(78, Short.MAX_VALUE))
+        );
+
+        modificar_est.setText("jMenuItem1");
+        modificar_est.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                modificar_estActionPerformed(evt);
+            }
+        });
+        menu_modificar_estudiante.add(modificar_est);
+
+        jLabel31.setText("Nombre Completo");
+
+        jLabel32.setText("Edad");
+
+        jLabel33.setText("Id");
+
+        jLabel34.setText("Id de boleto");
+
+        jLabel35.setText("Departamento");
+
+        jLabel36.setText("Dinero disponible");
+
+        jButton17.setText("Modificar");
+        jButton17.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton17ActionPerformed(evt);
+            }
+        });
+
+        modificar_departamento_estudiante.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Atlántida", "Choluteca", "Colón", "Comayagua", "Copán", "Cortes", "El Paraíso", "Francisco Morazán", "Gracias a Dios", "Intibucá", "Islas de la Bahía", "La Paz", "Lempira", "Ocotepeque", "Olancho", "Santa Bárbara", "Valle", "Yoro" }));
+
+        boleto_estudiante1.setEditable(false);
+        boleto_estudiante1.setText("0");
+        boleto_estudiante1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                boleto_estudiante1ActionPerformed(evt);
+            }
+        });
+
+        modificar_id_estudiante.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                modificar_id_estudianteActionPerformed(evt);
+            }
+        });
+
+        jLabel37.setText("Carrera");
+
+        javax.swing.GroupLayout modificar_estudianteLayout = new javax.swing.GroupLayout(modificar_estudiante.getContentPane());
+        modificar_estudiante.getContentPane().setLayout(modificar_estudianteLayout);
+        modificar_estudianteLayout.setHorizontalGroup(
+            modificar_estudianteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(modificar_estudianteLayout.createSequentialGroup()
+                .addGroup(modificar_estudianteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(modificar_estudianteLayout.createSequentialGroup()
+                        .addGap(111, 111, 111)
+                        .addComponent(jButton17))
+                    .addGroup(modificar_estudianteLayout.createSequentialGroup()
+                        .addGap(25, 25, 25)
+                        .addGroup(modificar_estudianteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jLabel37, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel36, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel35, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel34, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel33, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel32, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel31, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(37, 37, 37)
+                        .addGroup(modificar_estudianteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(modificar_departamento_estudiante, 0, 154, Short.MAX_VALUE)
+                            .addComponent(modificar_edad_estudiante)
+                            .addComponent(boleto_estudiante1)
+                            .addComponent(modificar_id_estudiante)
+                            .addComponent(modificar_nombre_estudiante)
+                            .addComponent(modificar_dinero_estudiante)
+                            .addComponent(modificar_carrera))))
+                .addContainerGap(100, Short.MAX_VALUE))
+        );
+        modificar_estudianteLayout.setVerticalGroup(
+            modificar_estudianteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(modificar_estudianteLayout.createSequentialGroup()
+                .addGap(27, 27, 27)
+                .addGroup(modificar_estudianteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel31)
+                    .addComponent(modificar_nombre_estudiante, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(modificar_estudianteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel32)
+                    .addComponent(modificar_edad_estudiante, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(modificar_estudianteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel33)
+                    .addComponent(modificar_id_estudiante, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(modificar_estudianteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel34)
+                    .addComponent(boleto_estudiante1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(modificar_estudianteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel35)
+                    .addComponent(modificar_departamento_estudiante, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(modificar_estudianteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel36)
+                    .addComponent(modificar_dinero_estudiante, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(modificar_estudianteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel37)
+                    .addComponent(modificar_carrera, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
+                .addComponent(jButton17)
+                .addContainerGap())
+        );
+
+        modificar_poli.setText("jMenuItem1");
+        modificar_poli.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                modificar_poliActionPerformed(evt);
+            }
+        });
+        menu_modificar_politico.add(modificar_poli);
+
+        jLabel38.setText("Nombre Completo");
+
+        jLabel39.setText("Edad");
+
+        jLabel40.setText("Id");
+
+        jLabel41.setText("Id de boleto");
+
+        jLabel42.setText("Departamento");
+
+        jLabel43.setText("Dinero disponible");
+
+        jButton18.setText("Modificar");
+        jButton18.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton18ActionPerformed(evt);
+            }
+        });
+
+        modificar_departamento_politico.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Atlántida", "Choluteca", "Colón", "Comayagua", "Copán", "Cortes", "El Paraíso", "Francisco Morazán", "Gracias a Dios", "Intibucá", "Islas de la Bahía", "La Paz", "Lempira", "Ocotepeque", "Olancho", "Santa Bárbara", "Valle", "Yoro" }));
+
+        boleto_politico1.setEditable(false);
+        boleto_politico1.setText("0");
+        boleto_politico1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                boleto_politico1ActionPerformed(evt);
+            }
+        });
+
+        modificar_id_politico.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                modificar_id_politicoActionPerformed(evt);
+            }
+        });
+
+        jLabel44.setText("Partido");
+
+        modificar_partidos.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Libre", "Liberal", "Nacional", "PAC", "APH", "FAPER" }));
+
+        javax.swing.GroupLayout modificar_politicosLayout = new javax.swing.GroupLayout(modificar_politicos.getContentPane());
+        modificar_politicos.getContentPane().setLayout(modificar_politicosLayout);
+        modificar_politicosLayout.setHorizontalGroup(
+            modificar_politicosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(modificar_politicosLayout.createSequentialGroup()
+                .addGroup(modificar_politicosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(modificar_politicosLayout.createSequentialGroup()
+                        .addGap(111, 111, 111)
+                        .addComponent(jButton18))
+                    .addGroup(modificar_politicosLayout.createSequentialGroup()
+                        .addGap(25, 25, 25)
+                        .addGroup(modificar_politicosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jLabel44, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel43, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel42, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel41, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel40, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel39, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel38, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(37, 37, 37)
+                        .addGroup(modificar_politicosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(modificar_departamento_politico, 0, 154, Short.MAX_VALUE)
+                            .addComponent(modificar_edad_politico)
+                            .addComponent(boleto_politico1)
+                            .addComponent(modificar_id_politico)
+                            .addComponent(modificar_nombre_politico)
+                            .addComponent(modificar_dinero_politico)
+                            .addComponent(modificar_partidos, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addContainerGap(93, Short.MAX_VALUE))
+        );
+        modificar_politicosLayout.setVerticalGroup(
+            modificar_politicosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(modificar_politicosLayout.createSequentialGroup()
+                .addGap(27, 27, 27)
+                .addGroup(modificar_politicosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel38)
+                    .addComponent(modificar_nombre_politico, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(modificar_politicosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel39)
+                    .addComponent(modificar_edad_politico, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(modificar_politicosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel40)
+                    .addComponent(modificar_id_politico, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(modificar_politicosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel41)
+                    .addComponent(boleto_politico1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(modificar_politicosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel42)
+                    .addComponent(modificar_departamento_politico, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(modificar_politicosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel43)
+                    .addComponent(modificar_dinero_politico, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(modificar_politicosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel44)
+                    .addComponent(modificar_partidos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 24, Short.MAX_VALUE)
+                .addComponent(jButton18)
+                .addContainerGap())
+        );
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel2.setText("Contraseña");
@@ -508,10 +1180,10 @@ public class Principal extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         if (contraseña.getText().equals(this.password)) {
-            this.participante.setEnabled(true);
-            this.participante.setEnabled(true);
-            this.participante.setEnabled(false);
-            this.participante.setVisible(false);
+            this.participante.setModal(true);
+            this.participante.pack();
+            this.participante.setLocationRelativeTo(this);
+            this.participante.setVisible(true);
         } else {
             JOptionPane.showMessageDialog(this.participante, "Usuario Incorrecto");
         }
@@ -521,10 +1193,10 @@ public class Principal extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        this.agregar.setEnabled(true);
-        this.agregar.setEnabled(true);
-        this.agregar.setEnabled(false);
-        this.agregar.setVisible(false);
+        this.agregar.setModal(true);
+        this.agregar.pack();
+        this.agregar.setLocationRelativeTo(this);
+        this.agregar.setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void id_empleadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_id_empleadoActionPerformed
@@ -563,6 +1235,17 @@ public class Principal extends javax.swing.JFrame {
             empleos = empleo.getText();
             lista.add(new Empleado(empleos, nombre, edad, id, id_boleto, departamento, dinero));
             JOptionPane.showMessageDialog(null, "Empleado agregado");
+            DefaultTableModel modelo = (DefaultTableModel) tabla_empleado.getModel();
+            Object[] newrow = {nombre_empleado.getText(), edad_empleado.getText(), id_empleado.getText()};
+            modelo.addRow(newrow);
+            tabla_empleado.setModel(modelo);
+            nombre_empleado.setText("");
+            edad_empleado.setText("");
+            id_empleado.setText("");
+            boleto_empleado.setText("");
+            dinero_empleado.setText("");
+            empleo.setText("");
+
         } catch (Exception e) {
             e.printStackTrace();
             JOptionPane.showMessageDialog(this, "Ocurrio un error y no se guardaron los datos");
@@ -582,6 +1265,16 @@ public class Principal extends javax.swing.JFrame {
             carreras = carrera.getText();
             lista.add(new Estudiantes(carreras, nombre, edad, id, id_boleto, departamento, dinero));
             JOptionPane.showMessageDialog(null, "Estudiante Agregado ");
+            DefaultTableModel modelo = (DefaultTableModel) tabla_estudiante.getModel();
+            Object[] newrow = {nombre_estudiante.getText(), edad_estudiante.getText(), id_estudiante.getText()};
+            modelo.addRow(newrow);
+            tabla_estudiante.setModel(modelo);
+            nombre_estudiante.setText("");
+            edad_estudiante.setText("");
+            id_estudiante.setText("");
+            boleto_estudiante.setText("");
+            dinero_estudiante.setText("");
+            carrera.setText("");
         } catch (Exception e) {
             e.printStackTrace();
             JOptionPane.showMessageDialog(this, "Ocurrio un error y no se guardaron los datos");
@@ -600,11 +1293,224 @@ public class Principal extends javax.swing.JFrame {
             partido = partidos.getSelectedItem().toString();
             lista.add(new Politico(partido, nombre, edad, id, id_boleto, departamento, dinero));
             JOptionPane.showMessageDialog(null, "Politico agregado ");
+            DefaultTableModel modelo = (DefaultTableModel) tabla_politico.getModel();
+            Object[] newrow = {nombre_politico.getText(), edad_politico.getText(), id_politico.getText()};
+            modelo.addRow(newrow);
+            tabla_politico.setModel(modelo);
+            nombre_politico.setText("");
+            edad_politico.setText("");
+            id_politico.setText("");
+            boleto_politico.setText("");
+            dinero_politico.setText("");
         } catch (Exception e) {
             e.printStackTrace();
             JOptionPane.showMessageDialog(this, "Ocurrio un error y no se guardaron los datos");
         }
     }//GEN-LAST:event_jButton7ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        // TODO add your handling code here:
+        this.modificar.setModal(true);
+        this.modificar.pack();
+        this.modificar.setLocationRelativeTo(this);
+        this.modificar.setVisible(true);
+    }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
+        // TODO add your handling code here:
+        if (tabla_empleado.getSelectedRow() >= 0) {
+            DefaultTableModel modelo = (DefaultTableModel) tabla_empleado.getModel();
+            modelo.removeRow(tabla_empleado.getSelectedRow());
+            tabla_empleado.setModel(modelo);
+        }
+    }//GEN-LAST:event_jButton13ActionPerformed
+
+    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+        // TODO add your handling code here:
+
+    }//GEN-LAST:event_jButton8ActionPerformed
+
+    private void tabla_empleadoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tabla_empleadoMouseClicked
+        // TODO add your handling code here:
+        if (evt.isMetaDown()) {
+            int row = tabla_empleado.getSelectedRow();
+            // tabla_tecnicos.setSelectionMode(row);
+            if (tabla_empleado.getSelectedRow() != -1) {
+                menu_modificar_empleado.show(evt.getComponent(), evt.getX(), evt.getY());
+
+            }
+        }
+    }//GEN-LAST:event_tabla_empleadoMouseClicked
+
+    private void menu_modificar_empleadoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_menu_modificar_empleadoMouseClicked
+        // TODO add your handling code here:
+
+    }//GEN-LAST:event_menu_modificar_empleadoMouseClicked
+
+    private void modifcar_eActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_modifcar_eActionPerformed
+        // TODO add your handling code here:
+        this.modificar_empleado.setModal(true);
+        this.modificar_empleado.pack();
+        this.modificar_empleado.setLocationRelativeTo(this);
+        this.modificar_empleado.setVisible(true);
+        DefaultTableModel modelo = (DefaultTableModel) tabla_empleado.getModel();
+        modelo.removeRow(tabla_empleado.getSelectedRow());
+        lista.remove(tabla_empleado.getSelectedRowCount());
+        tabla_empleado.setModel(modelo);
+        this.modificar_empleado.setVisible(false);
+
+    }//GEN-LAST:event_modifcar_eActionPerformed
+
+    private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
+        // TODO add your handling code here:
+        try {
+            nombre = modificar_nombre_empleado.getText();
+            edad = Integer.parseInt(modificar_edad_empleado.getText());
+            id = Integer.parseInt(modificar_id_empleado.getText());
+            id_boleto = Integer.parseInt(boleto_empleado1.getText());
+            departamento = modificar_departamento_empleado.getSelectedItem().toString();
+            dinero = Double.parseDouble(modificar_dinero_empleado.getText());
+            empleos = modificar_empleo.getText();
+            lista.add(new Empleado(empleos, nombre, edad, id, id_boleto, departamento, dinero));
+            JOptionPane.showMessageDialog(null, "Empleado agregado");
+            DefaultTableModel modelo = (DefaultTableModel) tabla_empleado.getModel();
+            Object[] newrow = {modificar_nombre_empleado.getText(), modificar_edad_empleado.getText(), modificar_id_empleado.getText()};
+            modelo.addRow(newrow);
+            tabla_empleado.setModel(modelo);
+        } catch (Exception e) {
+            e.printStackTrace();
+            JOptionPane.showMessageDialog(this, "Ocurrio un error y no se guardaron los datos");
+        }
+
+    }//GEN-LAST:event_jButton14ActionPerformed
+
+    private void boleto_empleado1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boleto_empleado1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_boleto_empleado1ActionPerformed
+
+    private void modificar_id_empleadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_modificar_id_empleadoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_modificar_id_empleadoActionPerformed
+
+    private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15ActionPerformed
+        // TODO add your handling code here:
+        this.Compras.setModal(true);
+        this.Compras.pack();
+        this.Compras.setLocationRelativeTo(this);
+        this.Compras.setVisible(true);
+    }//GEN-LAST:event_jButton15ActionPerformed
+
+    private void tabla_estudianteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tabla_estudianteMouseClicked
+        // TODO add your handling code here:
+        if (evt.isMetaDown()) {
+            int row = tabla_estudiante.getSelectedRow();
+            // tabla_tecnicos.setSelectionMode(row);
+            if (tabla_estudiante.getSelectedRow() != -1) {
+                menu_modificar_estudiante.show(evt.getComponent(), evt.getX(), evt.getY());
+
+            }
+        }
+    }//GEN-LAST:event_tabla_estudianteMouseClicked
+
+    private void modificar_estActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_modificar_estActionPerformed
+        // TODO add your handling code here:
+        this.modificar_estudiante.setModal(true);
+        this.modificar_estudiante.pack();
+        this.modificar_estudiante.setLocationRelativeTo(this);
+        this.modificar_estudiante.setVisible(true);
+        DefaultTableModel modelo = (DefaultTableModel) tabla_estudiante.getModel();
+        modelo.removeRow(tabla_estudiante.getSelectedRow());
+        lista.remove(tabla_estudiante.getSelectedRowCount());
+        tabla_estudiante.setModel(modelo);
+        this.modificar_estudiante.setVisible(false);
+    }//GEN-LAST:event_modificar_estActionPerformed
+
+    private void jButton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton17ActionPerformed
+        // TODO add your handling code here:
+        try {
+            nombre = modificar_nombre_estudiante.getText();
+            edad = Integer.parseInt(modificar_edad_estudiante.getText());
+            id = Integer.parseInt(modificar_id_estudiante.getText());
+            id_boleto = Integer.parseInt(boleto_estudiante1.getText());
+            departamento = modificar_departamento_estudiante.getSelectedItem().toString();
+            dinero = Double.parseDouble(modificar_dinero_estudiante.getText());
+            carreras = modificar_carrera.getText();
+            lista.add(new Estudiantes(carreras, nombre, edad, id, id_boleto, departamento, dinero));
+            JOptionPane.showMessageDialog(null, "Estudiante Agregado ");
+            DefaultTableModel modelo = (DefaultTableModel) tabla_estudiante.getModel();
+            Object[] newrow = {nombre_estudiante.getText(), edad_estudiante.getText(), id_estudiante.getText()};
+            modelo.addRow(newrow);
+            tabla_estudiante.setModel(modelo);
+            modificar_nombre_estudiante.setText("");
+            modificar_edad_estudiante.setText("");
+            modificar_id_estudiante.setText("");
+            boleto_estudiante1.setText("");
+            modificar_dinero_estudiante.setText("");
+            modificar_carrera.setText("");
+        } catch (Exception e) {
+            e.printStackTrace();
+            JOptionPane.showMessageDialog(this, "Ocurrio un error y no se guardaron los datos");
+        }
+
+    }//GEN-LAST:event_jButton17ActionPerformed
+
+    private void boleto_estudiante1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boleto_estudiante1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_boleto_estudiante1ActionPerformed
+
+    private void modificar_id_estudianteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_modificar_id_estudianteActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_modificar_id_estudianteActionPerformed
+
+    private void modificar_poliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_modificar_poliActionPerformed
+        // TODO add your handling code here:
+         this.modificar_politicos.setModal(true);
+        this.modificar_politicos.pack();
+        this.modificar_politicos.setLocationRelativeTo(this);
+        this.modificar_politicos.setVisible(true);
+        DefaultTableModel modelo = (DefaultTableModel) tabla_politico.getModel();
+        modelo.removeRow(tabla_politico.getSelectedRow());
+        lista.remove(tabla_politico.getSelectedRowCount());
+        tabla_politico.setModel(modelo);
+        this.modificar_politicos.setVisible(false);
+
+    }//GEN-LAST:event_modificar_poliActionPerformed
+
+    private void jButton18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton18ActionPerformed
+        // TODO add your handling code here:
+        try {
+            nombre = modificar_nombre_politico.getText();
+            edad = Integer.parseInt(modificar_edad_politico.getText());
+            id = Integer.parseInt(modificar_id_politico.getText());
+            id_boleto = Integer.parseInt(boleto_politico1.getText());
+            departamento = modificar_departamento_politico.getSelectedItem().toString();
+            dinero = Double.parseDouble(modificar_dinero_politico.getText());
+            partido = modificar_partidos.getSelectedItem().toString();
+            lista.add(new Politico(partido, nombre, edad, id, id_boleto, departamento, dinero));
+            JOptionPane.showMessageDialog(null, "Politico agregado ");
+            DefaultTableModel modelo = (DefaultTableModel) tabla_politico.getModel();
+            Object[] newrow = {modificar_nombre_politico.getText(), modificar_edad_politico.getText(), modificar_id_politico.getText()};
+            modelo.addRow(newrow);
+            tabla_politico.setModel(modelo);
+            modificar_nombre_politico.setText("");
+            modificar_edad_politico.setText("");
+            modificar_id_politico.setText("");
+            boleto_politico1.setText("");
+            modificar_dinero_politico.setText("");
+        } catch (Exception e) {
+            e.printStackTrace();
+            JOptionPane.showMessageDialog(this, "Ocurrio un error y no se guardaron los datos");
+        }
+    }//GEN-LAST:event_jButton18ActionPerformed
+
+    private void boleto_politico1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boleto_politico1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_boleto_politico1ActionPerformed
+
+    private void modificar_id_politicoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_modificar_id_politicoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_modificar_id_politicoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -642,12 +1548,17 @@ public class Principal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JDialog Compras;
     private javax.swing.JDialog agregar;
     private javax.swing.JTextField boleto_empleado;
+    private javax.swing.JTextField boleto_empleado1;
     private javax.swing.JTextField boleto_estudiante;
+    private javax.swing.JTextField boleto_estudiante1;
     private javax.swing.JTextField boleto_politico;
+    private javax.swing.JTextField boleto_politico1;
     private javax.swing.JTextField carrera;
     private javax.swing.JPasswordField contraseña;
+    private javax.swing.ButtonGroup costo;
     private javax.swing.JComboBox<String> departamento_empleado;
     private javax.swing.JComboBox<String> departamento_estudiante;
     private javax.swing.JComboBox<String> departamento_politico;
@@ -662,12 +1573,24 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JTextField id_estudiante;
     private javax.swing.JTextField id_politico;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton10;
+    private javax.swing.JButton jButton11;
+    private javax.swing.JButton jButton12;
+    private javax.swing.JButton jButton13;
+    private javax.swing.JButton jButton14;
+    private javax.swing.JButton jButton15;
+    private javax.swing.JButton jButton16;
+    private javax.swing.JButton jButton17;
+    private javax.swing.JButton jButton18;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
+    private javax.swing.JButton jButton8;
+    private javax.swing.JButton jButton9;
+    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -684,8 +1607,29 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel27;
+    private javax.swing.JLabel jLabel28;
+    private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel30;
+    private javax.swing.JLabel jLabel31;
+    private javax.swing.JLabel jLabel32;
+    private javax.swing.JLabel jLabel33;
+    private javax.swing.JLabel jLabel34;
+    private javax.swing.JLabel jLabel35;
+    private javax.swing.JLabel jLabel36;
+    private javax.swing.JLabel jLabel37;
+    private javax.swing.JLabel jLabel38;
+    private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel40;
+    private javax.swing.JLabel jLabel41;
+    private javax.swing.JLabel jLabel42;
+    private javax.swing.JLabel jLabel43;
+    private javax.swing.JLabel jLabel44;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
@@ -694,12 +1638,54 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel6;
+    private javax.swing.JRadioButton jRadioButton1;
+    private javax.swing.JRadioButton jRadioButton2;
+    private javax.swing.JRadioButton jRadioButton3;
+    private javax.swing.JRadioButton jRadioButton4;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JTabbedPane jTabbedPane2;
+    private javax.swing.JPopupMenu menu_modificar_empleado;
+    private javax.swing.JPopupMenu menu_modificar_estudiante;
+    private javax.swing.JPopupMenu menu_modificar_politico;
+    private javax.swing.JMenuItem modifcar_e;
+    private javax.swing.JDialog modificar;
+    private javax.swing.JTextField modificar_carrera;
+    private javax.swing.JComboBox<String> modificar_departamento_empleado;
+    private javax.swing.JComboBox<String> modificar_departamento_estudiante;
+    private javax.swing.JComboBox<String> modificar_departamento_politico;
+    private javax.swing.JTextField modificar_dinero_empleado;
+    private javax.swing.JTextField modificar_dinero_estudiante;
+    private javax.swing.JTextField modificar_dinero_politico;
+    private javax.swing.JTextField modificar_edad_empleado;
+    private javax.swing.JTextField modificar_edad_estudiante;
+    private javax.swing.JTextField modificar_edad_politico;
+    private javax.swing.JDialog modificar_empleado;
+    private javax.swing.JTextField modificar_empleo;
+    private javax.swing.JMenuItem modificar_est;
+    private javax.swing.JDialog modificar_estudiante;
+    private javax.swing.JTextField modificar_id_empleado;
+    private javax.swing.JTextField modificar_id_estudiante;
+    private javax.swing.JTextField modificar_id_politico;
+    private javax.swing.JTextField modificar_nombre_empleado;
+    private javax.swing.JTextField modificar_nombre_estudiante;
+    private javax.swing.JTextField modificar_nombre_politico;
+    private javax.swing.JComboBox<String> modificar_partidos;
+    private javax.swing.JMenuItem modificar_poli;
+    private javax.swing.JDialog modificar_politicos;
     private javax.swing.JTextField nombre_empleado;
     private javax.swing.JTextField nombre_estudiante;
     private javax.swing.JTextField nombre_politico;
     private javax.swing.JDialog participante;
     private javax.swing.JComboBox<String> partidos;
+    private javax.swing.JTable tabla_empleado;
+    private javax.swing.JTable tabla_estudiante;
+    private javax.swing.JTable tabla_politico;
     // End of variables declaration//GEN-END:variables
     ArrayList<Persona> lista = new ArrayList();
     String password = "12";
