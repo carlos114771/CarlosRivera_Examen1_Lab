@@ -691,6 +691,11 @@ public class Principal extends javax.swing.JFrame {
         jButton10.setText("Modificar");
 
         jButton11.setText("Eliminar");
+        jButton11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton11ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
@@ -1519,12 +1524,21 @@ public class Principal extends javax.swing.JFrame {
 
     private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
         // TODO add your handling code here:
-//        if (tabla_estudiante.getSelectedRow() >= 0) {
-//            DefaultTableModel modelo = (DefaultTableModel) tabla_estudiante.getModel();
-//            modelo.removeRow(tabla_estudiante.getSelectedRow());
-//            tabla_estudiante.setModel(modelo);
-//        }
+        if (tabla_estudiante.getSelectedRow() >= 0) {
+            DefaultTableModel modelo = (DefaultTableModel) tabla_estudiante.getModel();
+            modelo.removeRow(tabla_estudiante.getSelectedRow());
+            tabla_estudiante.setModel(modelo);
+        }
     }//GEN-LAST:event_jButton12ActionPerformed
+
+    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
+        // TODO add your handling code here:
+                if (tabla_politico.getSelectedRow() >= 0) {
+            DefaultTableModel modelo = (DefaultTableModel) tabla_politico.getModel();
+            modelo.removeRow(tabla_politico.getSelectedRow());
+            tabla_politico.setModel(modelo);
+        }
+    }//GEN-LAST:event_jButton11ActionPerformed
 
     /**
      * @param args the command line arguments
