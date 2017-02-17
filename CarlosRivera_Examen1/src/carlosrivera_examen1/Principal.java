@@ -1518,6 +1518,11 @@ public class Principal extends javax.swing.JFrame {
         tabla_politico.setModel(modelo);
         this.modificar_politicos.setVisible(false);
 
+        
+        
+        
+        
+        
     }//GEN-LAST:event_modificar_poliActionPerformed
 
     private void jButton18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton18ActionPerformed
